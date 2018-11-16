@@ -6,8 +6,9 @@ import plotly.graph_objs as go
 import re
 import random
 
-df = pd.read_csv(
-    'kit_sponsors_real.csv')
+
+# csv_file = requests.get('https://raw.githubusercontent.com/chudianya/kit_sponsors_plotly/blob/master/kit_sponsors_real.csv')
+df = pd.read_csv("https://raw.githubusercontent.com/chudianya/kit_sponsors_plotly/master/kit_sponsors_real.csv")
 
 cols = [re.sub(r"\-\d+","",day) for day in df.columns]
 cols_dict = {re.sub(r"\-\d+","",year): year for year in df.columns}
